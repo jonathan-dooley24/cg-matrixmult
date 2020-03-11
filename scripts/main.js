@@ -15,14 +15,15 @@ function CalculateCompoundTransform(transforms) {
     var tranform_matrices = [];
 	if(transforms.length == 1){		// if theres only one transform
 		compound_transform = transforms[0];
-	}   
-	else if(transforms.length > 1){ 
+	}
+	else if(transforms.length > 1){
 		compound_transform = transforms[0];
- 
+		
 		for(var i = 1; i < transforms.length; i++){
 		compound_transform = Matrix.multiply(transforms[i], compound_transform) //IS THIS THE RIGHT ORDER OF MULT?
+		console.log( "#" + i + " loop");
 		}
-	}  
+	}
 	console.log("hippo!");
 	//compound_transform = new Matrix(4, 4); // change / remove this 
     return compound_transform;
