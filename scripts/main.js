@@ -14,16 +14,16 @@ function CalculateCompoundTransform(transforms) {
 	console.log("hi1");
     var tranform_matrices = [];
 	if(transforms.length == 1){		// if theres only one transform
-		compound_transform = transforms[0];
+		compound_transform = transforms[0].mat4x4;
 	}
 	else if(transforms.length > 1){
 		compound_transform = transforms[0].mat4x4;
 		console.log( "compoundsss" + compound_transform.mat4x4);
 		for(var i = 1; i < transforms.length; i++){
-		compound_transform = Matrix.multiply(transforms[i].mat4x4, compound_transform.mat4x4) //IS THIS THE RIGHT ORDER OF MULT?
-		console.log( "#" + i + " loop");
-		console.log( "transforms" + transforms[i].mat4x4);
-		console.log( "compound" + compound_transform.mat4x4);
+			compound_transform = Matrix.multiply([transforms[i].mat4x4, compound_transform]) //IS THIS THE RIGHT ORDER OF MULT?
+			console.log( "#" + i + " loop");
+			console.log( "transforms" + transforms[i].mat4x4);
+			console.log( "compound" + compound_transform.mat4x4);
 		}
 	}
 	console.log("hippo!");
