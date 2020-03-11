@@ -11,10 +11,10 @@ function CalculateCompoundTransform(transforms) {
     var tranform_matrices = [];
 	if(transform.length == 1){		// if theres only one transform
 		compound_transform = transform[0];
-	}
+	} 
 	else if(transform.length > 1){
 		compound_transform = transform[0];
-		for(int i = 1; i < transform.length; i++){
+		for(var i = 1; i < transform.length; i++){
 			compound_transform = Matrix.multiply(transform[i], compound_transform) //IS THIS THE RIGHT ORDER OF MULT?
 		}
 	} 
