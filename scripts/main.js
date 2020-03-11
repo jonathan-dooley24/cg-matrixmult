@@ -18,7 +18,7 @@ function CalculateCompoundTransform(transforms) {
 			compound_transform = Matrix.multiply(transform[i], compound_transform) //IS THIS THE RIGHT ORDER OF MULT?
 		}
 	} 
-	Console.log("hi");
+	console.log("hi");
 	//compound_transform = new Matrix(4, 4); // change / remove this
     return compound_transform;
 }
