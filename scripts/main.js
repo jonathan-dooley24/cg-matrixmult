@@ -20,7 +20,7 @@ function CalculateCompoundTransform(transforms) {
 		compound_transform = transforms[0];
  
 		for(var i = 1; i < transforms.length; i++){
-		compound_transform = Matrix.multiply([transforms[i], compound_transform]) //IS THIS THE RIGHT ORDER OF MULT?
+		compound_transform = Matrix.multiply(transforms[i], compound_transform) //IS THIS THE RIGHT ORDER OF MULT?
 		}
 	}  
 	console.log("hippo!");
