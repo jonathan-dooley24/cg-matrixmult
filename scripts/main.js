@@ -1,8 +1,5 @@
 var compound_transform;
 
-//yy
-
-
 // automatically called whenever any transform changes
 function CalculateCompoundTransform(transforms) {
     // matrices in `transforms[i].mat4x4`
@@ -12,7 +9,6 @@ function CalculateCompoundTransform(transforms) {
     // otherwise multiply all matrices together (in proper order)
     // `compound_transform = Matrix.multiply(...)`
 	
-    //var tranform_matrices = [];
 	if(transforms.length == 1){		// if theres only one transform
 		compound_transform = transforms[0].mat4x4;
 	}
@@ -32,12 +28,7 @@ function CalculateTransformedVertex(vertex) {
     // multiple vertex by compound_transform
     // `final_vertex = Matrix.multiply(...)`
 	
-		//var final_vertex = new Vector(4);// change / remove this
-		//Vector4(final_vertex, vertex[0], vertex[1], vertex[2], vertex[3]);
-	
-    //var final_vertex = app.final_vertex; 
 	var final_vertex = Matrix.multiply([compound_transform, vertex]);
-	
     return final_vertex;
 }
 
@@ -47,7 +38,7 @@ function ChangeTransform(index, type, values) {
     app.transforms[index].type = type;
     // update `app.transforms[index].mat4x4`
 	switch(type) {
-		case 'translate':
+		case 'translate':  
 			Mat4x4Translate(app.transforms[index].mat4x4, values[0], values[1], values[2]);
 			break;
 		case 'scale':
