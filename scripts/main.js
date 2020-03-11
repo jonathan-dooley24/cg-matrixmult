@@ -1,7 +1,5 @@
 var compound_transform;
 
-//wuts
-
 //wutssw
 
 
