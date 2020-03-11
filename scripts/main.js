@@ -8,6 +8,7 @@ function CalculateCompoundTransform(transforms) {
     // if only one transform, set compound transform equal to it
     // otherwise multiply all matrices together (in proper order)
     // `compound_transform = Matrix.multiply(...)`
+	console.log("hi1");
     var tranform_matrices = [];
 	if(transform.length == 1){		// if theres only one transform
 		compound_transform = transform[0];
