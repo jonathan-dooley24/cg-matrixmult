@@ -1,6 +1,6 @@
 var compound_transform;
 
-//t12
+//t123
 
 
 // automatically called whenever any transform changes
@@ -21,7 +21,7 @@ function CalculateCompoundTransform(transforms) {
 
 		for(var i = 1; i < transforms.length; i++){
 			var current_transform = transforms[i];
-			var temp = coumpound_transform;
+			var temp = compound_transform;
 			compound_transform = Matrix.multiply(current_transform, temp) //IS THIS THE RIGHT ORDER OF MULT?
 		}
 	}  
