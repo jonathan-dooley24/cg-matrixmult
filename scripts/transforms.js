@@ -7,7 +7,7 @@ function Mat4x4Identity(mat4x4) {
 					0,0,0,1 //index 12 - 15
 					] 
 } 
-
+ 
 // set values of mat4x4 to the translate matrix
 function Mat4x4Translate(mat4x4, tx, ty, tz) {
     //mat4x4.values = ...
