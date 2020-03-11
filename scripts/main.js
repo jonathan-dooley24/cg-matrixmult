@@ -1,5 +1,5 @@
 var compound_transform;
-	console.log("hi111");
+//wut
 
 // automatically called whenever any transform changes
 function CalculateCompoundTransform(transforms) {
