@@ -1,6 +1,6 @@
 var compound_transform;
 
-//ttt
+//t
 
 
 // automatically called whenever any transform changes
