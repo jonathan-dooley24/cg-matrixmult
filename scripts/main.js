@@ -18,7 +18,7 @@ function CalculateCompoundTransform(transforms) {
 	}  
 	else if(transforms.length > 1){ 
 		compound_transform = transforms[0];
-
+ 
 		for(var i = 1; i < transforms.length; i++){
 			var current_transform = transforms[i];
 			var temp = compound_transform;
