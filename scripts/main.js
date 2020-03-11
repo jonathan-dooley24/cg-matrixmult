@@ -47,5 +47,7 @@ function ChangeTransform(index, type, values) {
 	console.log("hi776");
     // recalculate compound transform and tranformed vertex
     app.compound = CalculateCompoundTransform(app.transforms);
+	console.log("hi77");
     app.final_vertex = CalculateTransformedVertex(app.vertex);
+	console.log("hi88");
 }
