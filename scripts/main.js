@@ -30,10 +30,11 @@ function CalculateCompoundTransform(transforms) {
 
 // automatically called whenever compound transform changes
 function CalculateTransformedVertex(vertex) {
+	console.log("HELLO");
     // multiple vertex by compound_transform
     // `final_vertex = Matrix.multiply(...)`
     var final_vertex = new Vector(4); // change / remove this
-	
+	console.log("HELLOOOOO");
     return final_vertex;
 }
 
