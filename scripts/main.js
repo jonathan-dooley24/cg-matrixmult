@@ -1,6 +1,6 @@
 var compound_transform;
 
-//wyyye
+//wy
 
 
 // automatically called whenever any transform changes
