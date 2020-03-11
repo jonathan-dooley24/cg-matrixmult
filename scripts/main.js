@@ -44,6 +44,7 @@ function ChangeTransform(index, type, values) {
     app.transforms[index].type = type;
     // update `app.transforms[index].mat4x4`
 	app.transforms[index].mat4x4 = values;
+	console.log("hi776");
     // recalculate compound transform and tranformed vertex
     app.compound = CalculateCompoundTransform(app.transforms);
     app.final_vertex = CalculateTransformedVertex(app.vertex);
