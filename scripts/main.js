@@ -1,6 +1,6 @@
 var compound_transform;
-//ugh
-//t123
+
+//gg
 
 
 // automatically called whenever any transform changes
@@ -20,9 +20,7 @@ function CalculateCompoundTransform(transforms) {
 		compound_transform = transforms[0];
  
 		for(var i = 1; i < transforms.length; i++){
-			var current_transform = transforms[i];
-			var temp = compound_transform;
-			compound_transform = Matrix.multiply(current_transform, temp) //IS THIS THE RIGHT ORDER OF MULT?
+			compound_transform = Matrix.multiply(transforms[i], compound_transform) //IS THIS THE RIGHT ORDER OF MULT?
 		}
 	}  
 	console.log("hi");
@@ -45,7 +43,7 @@ function ChangeTransform(index, type, values) {
 
     app.transforms[index].type = type;
     // update `app.transforms[index].mat4x4`
-	
+	app.transforms[index].mat4x4 = values;
     // recalculate compound transform and tranformed vertex
     app.compound = CalculateCompoundTransform(app.transforms);
     app.final_vertex = CalculateTransformedVertex(app.vertex);
