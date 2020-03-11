@@ -8,7 +8,7 @@ function CalculateCompoundTransform(transforms) {
     // if only one transform, set compound transform equal to it
     // otherwise multiply all matrices together (in proper order)
     // `compound_transform = Matrix.multiply(...)`
-	console.log(hi1);
+	console.log("hi1");
     var tranform_matrices = [];
 	if(transform.length == 1){		// if theres only one transform
 		compound_transform = transform[0];
@@ -18,7 +18,7 @@ function CalculateCompoundTransform(transforms) {
 		for(var i = 1; i < transform.length; i++){
 			compound_transform = Matrix.multiply(transform[i], compound_transform) //IS THIS THE RIGHT ORDER OF MULT?
 		}
-	} 
+	}  
 	console.log("hi");
 	//compound_transform = new Matrix(4, 4); // change / remove this
     return compound_transform;
@@ -35,6 +35,8 @@ function CalculateTransformedVertex(vertex) {
 
  // automatically called whenever user modifies a transform (changes type or values)
 function ChangeTransform(index, type, values) {
+	console.log("hi42");
+
     app.transforms[index].type = type;
     // update `app.transforms[index].mat4x4`
 	
