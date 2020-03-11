@@ -4,20 +4,20 @@ var compound_transform;
 // automatically called whenever any transform changes
 function CalculateCompoundTransform(transforms) {
     // matrices in `transforms[i].mat4x4`
-    // note `transform[0]` is first tranform to apply to vertex
+    // note `transforms[0]` is first tranform to apply to vertex
     
     // if only one transform, set compound transform equal to it
     // otherwise multiply all matrices together (in proper order)
     // `compound_transform = Matrix.multiply(...)`
 	console.log("hi1");
     var tranform_matrices = [];
-	if(transform.length == 1){		// if theres only one transform
-		compound_transform = transform[0];
+	if(transforms.length == 1){		// if theres only one transform
+		compound_transform = transforms[0];
 	}  
-	else if(transform.length > 1){ 
-		compound_transform = transform[0];
+	else if(transforms.length > 1){ 
+		compound_transform = transforms[0];
 		for(var i = 1; i < transform.length; i++){
-			compound_transform = Matrix.multiply(transform[i], compound_transform) //IS THIS THE RIGHT ORDER OF MULT?
+			compound_transform = Matrix.multiply(transforms[i], compound_transform) //IS THIS THE RIGHT ORDER OF MULT?
 		}
 	}  
 	console.log("hi");
