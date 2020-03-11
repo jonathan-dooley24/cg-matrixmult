@@ -8,7 +8,7 @@ function CalculateCompoundTransform(transforms) {
     // if only one transform, set compound transform equal to it
     // otherwise multiply all matrices together (in proper order)
     // `compound_transform = Matrix.multiply(...)`
-	console.log("hi1");
+	console.log(hi1);
     var tranform_matrices = [];
 	if(transform.length == 1){		// if theres only one transform
 		compound_transform = transform[0];
@@ -37,7 +37,7 @@ function CalculateTransformedVertex(vertex) {
 function ChangeTransform(index, type, values) {
     app.transforms[index].type = type;
     // update `app.transforms[index].mat4x4`
-
+	
     // recalculate compound transform and tranformed vertex
     app.compound = CalculateCompoundTransform(app.transforms);
     app.final_vertex = CalculateTransformedVertex(app.vertex);
