@@ -1,9 +1,9 @@
 var compound_transform;
-<<<<<<< HEAD
+
 //wuts
-=======
+
 //wutssw
->>>>>>> a59123ed4c9c80ba68a210062a2a4c7b964ee22e
+
 
 // automatically called whenever any transform changes
 function CalculateCompoundTransform(transforms) {
@@ -20,11 +20,9 @@ function CalculateCompoundTransform(transforms) {
 	}  
 	else if(transforms.length > 1){ 
 		compound_transform = transforms[0];
-<<<<<<< HEAD
-		for(var i = 1; i < transforms.length; i++){ 
-=======
+
 		for(var i = 1; i < transforms.length; i++){
->>>>>>> a59123ed4c9c80ba68a210062a2a4c7b964ee22e
+
 			compound_transform = Matrix.multiply(transforms[i], compound_transform) //IS THIS THE RIGHT ORDER OF MULT?
 		}
 	}  
