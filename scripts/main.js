@@ -11,7 +11,7 @@ function CalculateCompoundTransform(transforms) {
     var tranform_matrices = [];
 	if(transform.length == 1){		// if theres only one transform
 		compound_transform = transform[0];
-	} 
+	}  
 	else if(transform.length > 1){
 		compound_transform = transform[0];
 		for(var i = 1; i < transform.length; i++){
