@@ -7,7 +7,7 @@ var compound_transform;
 function CalculateCompoundTransform(transforms) {
     // matrices in `transforms[i].mat4x4`
     // note `transforms[0]` is first tranform to apply to vertex
-       
+        
     // if only one transform, set compound transform equal to it
     // otherwise multiply all matrices together (in proper order)
     // `compound_transform = Matrix.multiply(...)`
@@ -26,7 +26,7 @@ function CalculateCompoundTransform(transforms) {
 		}
 	}  
 	console.log("hi");
-	//compound_transform = new Matrix(4, 4); // change / remove this
+	//compound_transform = new Matrix(4, 4); // change / remove this 
     return compound_transform;
 }
 
